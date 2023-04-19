@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- /******************************TEMPLATES***************************************/ -->
+	<!-- Base Definition -->
+	<definition name="login-definition"
+		template="/WEB-INF/views/tiles/layouts/loginLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="meta-js-css"
+			value="/WEB-INF/views/tiles/template/defaultMetaJSCSS.jsp" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="" />
+	</definition>
+
+
+	<!-- Base Definition -->
+	<definition name="base-definition"
+		template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="meta-js-css"
+			value="/WEB-INF/views/tiles/template/defaultMetaJSCSS.jsp" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+	</definition>
+
+
+	<!-- Base Definition for-only pagination -->
+	<definition name="base-definition-pagination"
+		template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="meta-js-css"
+			value="/WEB-INF/views/tiles/template/defaultMetaJSCSS2_pagination.jsp" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+	</definition>
+
+	<!-- pankaj Definition -->
+	<definition name="commondefine"
+		template="/WEB-INF/views/tiles/layouts/pankajLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="meta-js-css"
+			value="/WEB-INF/views/tiles/template/defaultMetaJSCSS.jsp" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+	</definition>
+
+	<!-- Base Definition -->
+	<definition name="base-definition-bidding"
+		template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="meta-js-css"
+			value="/WEB-INF/views/tiles/template/defaultMetaJSCSS.jsp" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+	</definition>
+
+	<!-- Simple Without Menu -->
+
+	<definition name="base-definition-without-menu"
+		template="/WEB-INF/views/tiles/layouts/simpleLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="meta-js-css"
+			value="/WEB-INF/views/tiles/template/defaultMetaJSCSS.jsp" />
+		<!-- <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" 
+			/> <put-attribute name="menu" value="/WEB-INF/views/tiles/template/defaultMenu.jsp" 
+			/> -->
+		<put-attribute name="body" value="" />
+		<!-- <put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" 
+			/> -->
+	</definition>
+
+	<!-- /********************************MAPING*************************************/ -->
+
+
+	<!-- Role Page -->
+	<definition name="role" extends="base-definition">
+		<put-attribute name="title" value="Role" />
+		<put-attribute name="body" value="/WEB-INF/views/role/role.jsp" />
+	</definition>
+
+	<!-- Login Page -->
+	<definition name="login" extends="login-definition">
+		<put-attribute name="title" value="login" />
+		<put-attribute name="body" value="/WEB-INF/views/login/login.jsp" />
+	</definition>
+
+	<definition name="Access_Denied" extends="login-definition">
+		<put-attribute name="title" value="Access_Denied" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/error/accessDenied.jsp" />
+	</definition>
+
+	<!-- Forgot Passowrd -->
+	<definition name="forgotpassowrd" extends="login-definition">
+		<put-attribute name="title" value="login" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/login/forgotpassword.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="home" extends="base-definition">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="body" value="/WEB-INF/views/home/home.jsp" />
+	</definition>
+
+	<!-- ORG Types Page -->
+	<definition name="orgtype" extends="base-definition-pagination">
+		<put-attribute name="title" value="ORG-Types" />
+		<put-attribute name="body" value="/WEB-INF/views/orgType/orgtype.jsp" />
+	</definition>
+	<definition name="vieworgtype" extends="base-definition">
+		<put-attribute name="title" value="ORG-Types" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/orgType/viewOrgType.jsp" />
+	</definition>
+
+	<!-- ORG Management Page -->
+	<definition name="orgManagement" extends="base-definition-pagination">
+		<put-attribute name="title" value="ORG-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/orgManagement/orgManagement.jsp" />
+	</definition>
+	<definition name="newEditOrgManagement" extends="base-definition">
+		<put-attribute name="title" value="ORG-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/orgManagement/newEditOrgManagement.jsp" />
+	</definition>
+	<definition name="viewOrgManagement" extends="base-definition">
+		<put-attribute name="title" value="ORG-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/orgManagement/viewOrgManagement.jsp" />
+	</definition>
+
+	<!-- ORG Management Audit Trail Page -->
+	<definition name="orgManagementAuditTrail" extends="base-definition-pagination">
+		<put-attribute name="title" value="ORG-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/orgManagementAuditTrail/orgManagementAuditTrail.jsp" />
+	</definition>
+
+
+	<!-- Currency Chest Page -->
+	<definition name="currencychest" extends="base-definition-pagination">
+		<put-attribute name="title" value="Currency Chest" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/currencyChest/currencyChest.jsp" />
+	</definition>
+	<definition name="newEditCurrencyChest" extends="base-definition">
+		<put-attribute name="title" value="Currency Chest" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/currencyChest/newEditCurrencyChest.jsp" />
+	</definition>
+
+	<definition name="viewCurrencyChest" extends="base-definition">
+		<put-attribute name="title" value="Branch Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/currencyChest/viewCurrencyChest.jsp" />
+	</definition>
+
+	<!-- EOD -->
+	<definition name="eod" extends="base-definition-pagination">
+		<put-attribute name="title" value="EOD" />
+		<put-attribute name="body" value="/WEB-INF/views/eod/eod.jsp" />
+	</definition>
+	<definition name="vault" extends="base-definition-pagination">
+		<put-attribute name="title" value="VAULT" />
+		<put-attribute name="body" value="/WEB-INF/views/eod/vault.jsp" />
+	</definition>
+
+
+
+
+	<!-- Branch Management page -->
+	<definition name="branchmManagement" extends="base-definition-pagination">
+		<put-attribute name="title" value="Branch Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/branchManagement.jsp" />
+	</definition>
+	<definition name="newEditBranchManagement" extends="base-definition">
+		<put-attribute name="title" value="Branch Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/newEditBranchManagement.jsp" />
+	</definition>
+	<definition name="viewBranchManagament" extends="base-definition">
+		<put-attribute name="title" value="Branch Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/viewBranchManagement.jsp" />
+	</definition>
+
+	<!-- Closed Branch Groups -->
+
+	<definition name="closegroupmanagement" extends="commondefine">
+		<put-attribute name="title" value="Closed Group Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/ClosedGroupManager.jsp" />
+	</definition>
+	<definition name="branchclosedmanager" extends="commondefine">
+		<put-attribute name="title" value="Branch Closed Group Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/BranchClosedGroupManager.jsp" />
+	</definition>
+	<definition name="branchgroupmanager" extends="base-definition-pagination">
+		<put-attribute name="title" value="Branch Closed Group Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/branchGroupManager.jsp" />
+	</definition>
+
+	<definition name="viewClosedGroupBranches" extends="base-definition">
+		<put-attribute name="title" value="Branch Closed Group" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/viewClosedGroupBranches.jsp" />
+	</definition>
+	<definition name="viewGroupBranches" extends="base-definition">
+		<put-attribute name="title" value="Branch Closed Group" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/viewBranchGroup.jsp" />
+	</definition>
+
+	<!-- Branch Correspondent association -->
+	
+	<definition name="branchCorrespondentManager" extends="base-definition-pagination">
+		<put-attribute name="title" value="Branch Correspondent Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/correspondent/branchCorrespondentManager.jsp" />
+	</definition>
+	
+
+	<!-- Branch EOD POSITION form -->
+
+	<definition name="brancheod" extends="base-definition">
+		<put-attribute name="title" value="Branch EOD Form" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/brancheod.jsp" />
+	</definition>
+
+	<!-- User Management page by pankaj -->
+	<definition name="usermanager" extends="base-definition-pagination">
+		<put-attribute name="title" value="User Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/userManagement/userManager.jsp" />
+	</definition>
+	<definition name="newEditUserManagement" extends="base-definition">
+		<put-attribute name="title" value="User Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/userManagement/newEditUserManagement.jsp" />
+	</definition>
+	<definition name="viewUserManagament" extends="base-definition">
+		<put-attribute name="title" value="User Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/userManagement/viewUserManagement.jsp" />
+	</definition>
+
+	<!-- User Role manager by pankaj -->
+	<definition name="userrolemanager" extends="commondefine">
+		<put-attribute name="title" value="UserRole Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/userRoleManagement/UserRoles.jsp" />
+	</definition>
+
+	<!-- User Role manager by pankaj -->
+	<definition name="permissionmanagement" extends="base-definition-pagination">
+		<put-attribute name="title" value="Permission Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/permission/permissionManager.jsp" />
+	</definition>
+
+	<definition name="newpermissionmanagement" extends="base-definition">
+		<put-attribute name="title" value="New Permission" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/permission/newEditPermissionManagement.jsp" />
+	</definition>
+
+	<!-- Branch Account Details By Pankaj -->
+	<definition name="branchAccounts" extends="base-definition">
+		<put-attribute name="title" value="Branch Accounts" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchAccountDetail/branchAccountDetail.jsp" />
+	</definition>
+
+	<definition name="branchAccountNewEdit" extends="base-definition">
+		<put-attribute name="title" value="New Branch Accounts" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchAccountDetail/newEditBranchAccountDetail.jsp" />
+	</definition>
+
+	<definition name="branchcontact" extends="base-definition">
+		<put-attribute name="title" value="Branch Contact" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchContact/branchContact.jsp" />
+	</definition>
+
+	<definition name="neweditbranchcontact" extends="base-definition">
+		<put-attribute name="title" value="New Branch Contact" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchContact/newEditBranchContact.jsp" />
+	</definition>
+
+	<!-- Role Permission manager by pankaj -->
+	<definition name="rolepermissionmanager" extends="commondefine">
+		<put-attribute name="title" value="RolePermission Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/rolePermissionManagement/RolePermission.jsp" />
+	</definition>
+
+	<!-- branchmanagement associations by pankaj -->
+	<definition name="branchassociates" extends="base-definition">
+		<put-attribute name="title" value="Branch Association" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/branchassociation.jsp" />
+	</definition>
+
+
+	<!-- Hierarchicalmanagement association by pankaj -->
+	<definition name="newHierarchyManagement" extends="base-definition">
+		<put-attribute name="title" value="Hierarchy-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/hierarchyManagement/newEditHierarchyManagement.jsp" />
+	</definition>
+	<definition name="hierarchyManagament" extends="base-definition-pagination">
+		<put-attribute name="title" value="Hierarchy-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/hierarchyManagement/hierarchyManagement.jsp" />
+	</definition>
+	<definition name="editHierarchyManagement" extends="base-definition">
+		<put-attribute name="title" value="Hierarchy-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/hierarchyManagement/editHierarchyManagement.jsp" />
+	</definition>
+	<definition name="viewHierarchyManagament" extends="base-definition">
+		<put-attribute name="title" value="Hierarchy-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/hierarchyManagement/viewHierarchyManagement.jsp" />
+	</definition>
+
+	<!-- Role Hierarchical Management -->
+
+	<definition name="newEditRole" extends="base-definition">
+		<put-attribute name="title" value="Role-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/role/newEditRole.jsp" />
+	</definition>
+	<definition name="roleManager" extends="base-definition-pagination">
+		<put-attribute name="title" value="Role-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/role/roleManager.jsp" />
+	</definition>
+
+	<!-- Designation Hierarchical Management -->
+
+	<definition name="newEditDesignation" extends="base-definition">
+		<put-attribute name="title" value="Designation-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/designation/newEditDesignation.jsp" />
+	</definition>
+	<definition name="designationManager" extends="base-definition-pagination">
+		<put-attribute name="title" value="Designation-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/designation/designationManager.jsp" />
+	</definition>
+
+	<!-- department Hierarchical Management -->
+
+	<definition name="newEditDepartment" extends="base-definition">
+		<put-attribute name="title" value="Department-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/department/newEditDepartment.jsp" />
+	</definition>
+	<definition name="departmentManager" extends="base-definition-pagination">
+		<put-attribute name="title" value="Department-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/department/departmentManager.jsp" />
+	</definition>
+
+	<!-- Group Management -->
+
+	<definition name="newEditBranchManagementByGroup" extends="base-definition">
+		<put-attribute name="title" value="Entity Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/newEditBranchManagementByGroup.jsp" />
+	</definition>
+
+	<definition name="newEditBranchManagementByGroups" extends="base-definition">
+		<put-attribute name="title" value="Designation-Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/testBranch.jsp" />
+	</definition>
+
+
+	<!-- Tiles Defination for Bidding Process -->
+
+
+	<definition name="biddashboard" extends="base-definition-bidding">
+		<put-attribute name="title" value="Bidding-Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/bidding/biddingDashboard.jsp" />
+	</definition>
+	<definition name="currentbidplacedashboard" extends="base-definition-bidding">
+		<put-attribute name="title" value="Current-Bidding-Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/bidding/currentBiddingDashboard.jsp" />
+	</definition>
+	<definition name="newEditPlaceBid" extends="base-definition-bidding">
+		<put-attribute name="title" value="Current-Bidding-Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/bidding/newEditPlaceBid.jsp" />
+	</definition>
+	<definition name="approvePlaceBiddashboard" extends="base-definition-bidding">
+		<put-attribute name="title" value="Approval-Bidding-Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/bidding/approvalPlaceBidDashboard.jsp" />
+	</definition>
+
+
+	<!-- main final dashboard tiles defination -->
+
+	<definition name="swapCashBetweenBranches" extends="base-definition-without-menu">
+		<put-attribute name="title" value="View Entity Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/swapCashBetweenBranches.jsp" />
+	</definition>
+
+	<definition name="centraluserbidswapdashboard" extends="base-definition-pagination">
+		<put-attribute name="title" value="Swap-Bidding-Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/centralSwapBidDashboard.jsp" />
+	</definition>
+
+
+	<definition name="userapprovalbiddashboard" extends="base-definition-pagination">
+		<put-attribute name="title" value="User Approval Bid Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/userApprovalBidDashboard.jsp" />
+	</definition>
+
+	<definition name="userbiddashboard" extends="base-definition-pagination">
+		<put-attribute name="title" value="User Bid Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/userBidDashboard.jsp" />
+	</definition>
+
+	<definition name="userdashboard" extends="base-definition-pagination">
+		<put-attribute name="title" value="User Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/userDashboard.jsp" />
+	</definition>
+
+	<definition name="centraluserdashboard" extends="base-definition-pagination">
+		<put-attribute name="title" value="User Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/centralUserDashboard.jsp" />
+	</definition>
+
+	<definition name="viewBranchManagamentUserDashboard"
+		extends="base-definition-pagination">
+		<put-attribute name="title" value="View Entity Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/viewBranchManagamentUserDashboard.jsp" />
+	</definition>
+
+	<definition name="userRequestCashForm" extends="base-definition-without-menu">
+		<put-attribute name="title" value="View Entity Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/userRequestCashForm.jsp" />
+	</definition>
+
+
+	<definition name="noclosedgroupsavailablepopup" extends="base-definition-without-menu">
+		<put-attribute name="title" value="No Groups Available" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/noGroupsAvailable.jsp" />
+	</definition>
+
+	<definition name="updateandapproverequestfordashboard"
+		extends="base-definition">
+		<put-attribute name="title" value="Update Dashboard Request" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/updateAndApproveRequestForDashboard.jsp" />
+	</definition>
+
+	<definition name="approverequestfordashboard" extends="base-definition">
+		<put-attribute name="title" value="Update Dashboard Request" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/approveDashboardRequest.jsp" />
+	</definition>
+
+	<!-- currency chest bid dashboard -->
+
+	<definition name="usercurrencychestbiddashboard" extends="base-definition-pagination">
+		<put-attribute name="title" value="Update Dashboard Request" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/dashboard/userCurrencyChestBidDashboard.jsp" />
+	</definition>
+
+
+
+
+
+
+
+
+
+	<!-- Tiles defination for demo purposes.. -->
+
+
+	<definition name="base-definition-for-radio"
+		template="/WEB-INF/views/tiles/layouts/pankajLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="meta-js-css" value="" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="" />
+	</definition>
+
+	<definition name="ncheckradiobutton" extends="base-definition-for-radio">
+		<put-attribute name="title" value="Entity Management" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/branchManagement/index.jsp" />
+	</definition>
+
+	<definition name="demofile" extends="base-definition-pagination">
+		<put-attribute name="title" value="Entity Management" />
+		<put-attribute name="body" value="/WEB-INF/views/home/demo.jsp" />
+	</definition>
+
+	<!-- Reports -->
+	<definition name="branchCashAvailabilityReport" extends="base-definition-pagination">
+		<put-attribute name="title" value="Branch CashAvailability Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/branchCashAvailabilityReport.jsp" />
+	</definition>
+
+	<definition name="branchReport" extends="base-definition-pagination">
+		<put-attribute name="title" value="Branch CashAvailability Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/branchReport.jsp" />
+	</definition>
+
+
+	<definition name="branchCashDenominationReport" extends="base-definition-pagination">
+		<put-attribute name="title" value="Branch CashDenomination Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/branchCashDenominationReport.jsp" />
+	</definition>
+
+	<definition name="branchActiveVsNonActiveReport" extends="base-definition-pagination">
+		<put-attribute name="title" value="Branch Active Vs Non Active Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/branchActiveVsNonActiveReport.jsp" />
+	</definition>
+
+	<definition name="bidsPlacedVsAcceptedReport" extends="base-definition-pagination">
+		<put-attribute name="title" value="Bids Placed Vs Accepted Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/bidsPlacedVsAcceptedReport.jsp" />
+	</definition>
+
+	<definition name="percentageReport" extends="base-definition-pagination">
+		<put-attribute name="title" value="Percentage Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/percentageReport.jsp" />
+	</definition>
+
+	<definition name="branchStatusReport" extends="base-definition-pagination">
+		<put-attribute name="title" value="Branch Status Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/branchStatusReport.jsp" />
+	</definition>
+
+
+
+	<definition name="stateTest" extends="base-definition-pagination">
+		<put-attribute name="title" value="stateTest" />
+		<put-attribute name="body" value="/WEB-INF/views/stateTest.jsp" />
+	</definition>
+
+	<!-- **************************************************** BID Definations 
+		********************************************* -->
+	<definition name="bid" extends="base-definition-pagination">
+		<put-attribute name="title" value="Bid" />
+		<put-attribute name="body" value="/WEB-INF/views/bid/bid.jsp" />
+	</definition>
+	<definition name="bidRequest" extends="base-definition-pagination">
+		<put-attribute name="title" value="Bid-Request" />
+		<put-attribute name="body" value="/WEB-INF/views/bid/bidRequest.jsp" />
+	</definition>
+
+	<definition name="bidAccept" extends="base-definition-pagination">
+		<put-attribute name="title" value="Bid-Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/bid/bidAccept.jsp" />
+	</definition>
+	<definition name="bidDashboard" extends="base-definition-pagination">
+		<put-attribute name="title" value="Bid-Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/bid/bidDashboard.jsp" />
+	</definition>
+
+
+	<!-- **************************************************** Report Definations 
+		********************************************* -->
+
+     <definition name="reportDashBoard" extends="base-definition">
+		<put-attribute name="title" value="report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/reportDashBoard.jsp" />
+	</definition>
+	<definition name="blackPage" extends="base-definition">
+		<put-attribute name="title" value="report" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/reports/blackPage.jsp" />
+	</definition>
+
+</tiles-definitions>

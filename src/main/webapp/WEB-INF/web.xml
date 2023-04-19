@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+	<!-- <web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+	<!-- xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" -->
+	<!-- id="WebApp_ID" version="2.4"> -->
+	<display-name>cashmanagement</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- <listener> <listener-class> org.springframework.web.context.request.RequestContextListener 
+		</listener-class> </listener> -->
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>/WEB-INF/tags/spring-form</taglib-uri>
+			<taglib-location>/WEB-INF/tags/spring-form.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/WEB-INF/tags/jstl-core</taglib-uri>
+			<taglib-location>/WEB-INF/tags/jstl-core.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/WEB-INF/tags/jstl-fmt</taglib-uri>
+			<taglib-location>/WEB-INF/tags/jstl-fmt.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/WEB-INF/tags/security</taglib-uri>
+			<taglib-location>/WEB-INF/tags/security.tld</taglib-location>
+		</taglib>
+		<taglib>
+			<taglib-uri>/WEB-INF/tags/customtags</taglib-uri>
+			<taglib-location>/WEB-INF/tags/customtags.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+
+<!-- 	<error-page> -->
+<!-- 		<error-code>404</error-code> -->
+<!-- 		<location>/WEB-INF/views/error/404.jsp</location> -->
+<!-- 	</error-page> -->
+
+<!-- 	<error-page> -->
+<!-- 		<error-code>500</error-code> -->
+<!-- 		<location>/WEB-INF/views/error/500.jsp</location> -->
+<!-- 	</error-page> -->
+
+</web-app>

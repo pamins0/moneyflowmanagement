@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>simple</short-name>
+	<uri>http://tomcat.apache.org/example-taglib</uri>
+	<tag>
+		<name>isAllowedDiv</name>
+		<tag-class>com.emorphis.cashmanagement.configuration.CustomTagHandler</tag-class>
+		<attribute>
+			<name>divKey</name>
+			<required>true</required>
+			<description>pass here div id, to get decision weather it is allowed
+				or not.</description>
+		</attribute>
+	</tag>
+	<function>
+		<name>isAllowed</name>
+		<function-class>com.emorphis.cashmanagement.util.Utility</function-class>
+		<function-signature>
+			java.lang.Boolean isAllowed(java.lang.String,
+			java.util.List)
+		</function-signature>
+	</function>
+
+</taglib>  
